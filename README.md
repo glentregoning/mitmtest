@@ -1,4 +1,4 @@
-# MITMTest - Test your App's SSL/TLS security to ensure its not vulnerable to Man in the Middle Attacks. #
+# MITMTest - Verify you're App's not vulnerable to Man in the Middle Attacks #
 
 ## Installation ##
 
