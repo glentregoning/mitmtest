@@ -17,7 +17,8 @@ sudo -H pip install mitmproxy --upgrade
 ```
 
 ## Usage ##
-```usage: mitmtest.sh [-h] [--test {insecure,domain,none}] [--suppress-pass]
+```
+usage: mitmtest.sh [-h] [--test {insecure,domain,none}] [--suppress-pass]
                    [example.com, an.example.com [example.com, an.example.com ...]]
 
 Test for Man In The Middle Vulnerabilities, including acceptance of self-
@@ -36,8 +37,7 @@ optional arguments:
                         application verifies the domain of the certificate
                         matches the host it's connecting to.
   --suppress-pass       don't print hosts which pass the MITM test
-  ```
-## Requirements ##
+```
 
 ## Author ##
 
@@ -45,4 +45,4 @@ Glen Tregoning, [@glent](http://twitter.com/glent)
 
 ## License
 
-MITMTest is available under the xxx license. See the LICENSE file for more info.
+MITMTest is available under the MIT license. See the [LICENSE](LICENSE) file for full details. 
