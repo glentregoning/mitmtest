@@ -1,6 +1,7 @@
 # MITMTest - Verify you're App's not vulnerable to Man in the Middle Attacks #
 
 ## Installation ##
+_Instructions tested on OSX_
 
 Clone this repository to your local system:
 i.e. 
@@ -8,15 +9,28 @@ i.e.
 cd ~/
 git clone git@github.com:glentregoning/mitmtest.git 
 cd ~/mitmtest
+
 ```
 
-### Installing Dependencies ###
+Installing Dependencies:
 ```
 sudo easy_install pip
 sudo -H pip install mitmproxy --upgrade
 ```
 
-## Usage ##
+
+
+## Usage
+
+1. Run mitmtest.sh
+ 1. ```./mitmtest.sh --test insecure``` tests applications against accepting insecure / self signed certificates
+ 2. ```./mitmtest.sh --test domain``` tests applications against accepting certificates domains other than the one being connected to. 
+2. Configure your device (e.g. iPhone / Android or iOS Simulator) to use your computer as it's proxy server on port 8080
+3. [In order to run domain validation tests] Open a webbrowser on your device, and visit http://mitm.it. Select the option matching your device to install a MITM root certificate. (see here for more information: http://mitmproxy.org/doc/certinstall/webapp.html). NOTE: If you don't install this certificate the  ```--test domain``` mode won't work (and will PASS every connection whether its secure or not).
+4. Run your app on your device, and watch the mitmtest.sh output the results of tests for hosts your app is test.
+
+## mitmtest.sh Command Arguments
+
 ```
 usage: mitmtest.sh [-h] [--test {insecure,domain,none}] [--suppress-pass]
                    [example.com, an.example.com [example.com, an.example.com ...]]
