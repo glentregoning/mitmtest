@@ -1,4 +1,4 @@
-# MITMTest - Verify you're App's not vulnerable to Man in the Middle Attacks #
+# MITMTest - Verify your App's not vulnerable to Man in the Middle Attacks #
 
 ## Installation ##
 _Instructions tested on OSX_
