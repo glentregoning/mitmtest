@@ -26,7 +26,7 @@ sudo -H pip install mitmproxy --upgrade
  1. ```./mitmtest.sh --test insecure``` tests applications against accepting insecure / self signed certificates
  2. ```./mitmtest.sh --test domain``` domain validation, testing applications against accepting certificates domains other than the one being connected to. 
 2. Configure your device (e.g. iPhone / Android or iOS Simulator) to use your computer as it's proxy server on port 8080
-3. [Required test 'domain' validation] 
+3. [Required for 'domain' validation tests] 
  1. Open a webbrowser on your device, and visit http://mitm.it. 
  2. Select the option matching your device to install a MITM root certificate. (see here for more information: http://mitmproxy.org/doc/certinstall/webapp.html). 
  3. NOTE: If you don't install this certificate the  ```--test domain``` mode won't work (and will PASS every connection whether its secure or not).
